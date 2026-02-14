@@ -1,0 +1,5 @@
+build-default:
+  stage: build
+  image: ubuntu:latest
+  script:
+    - echo "Running build at $(date) for branch ${CI_COMMIT_BRANCH}"
