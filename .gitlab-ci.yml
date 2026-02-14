@@ -3,11 +3,6 @@
   - git config --global advice.detachedHead false
   - git config --global user.email "dimagolov@gmail.com"
   - git config --global user.name "GitLab CI"
-  - rm -rf $CI_PROJECT_DIR 2> /dev/null || sudo rm -rf $CI_PROJECT_DIR
-  - git clone --quiet --filter=tree:0 $CI_REPOSITORY_URL $CI_PROJECT_DIR
-  - cd $CI_PROJECT_DIR
-  - git clean -fxfd
-  - git checkout --no-progress $CI_COMMIT_SHA
 
 default:
   before_script:
